@@ -1,0 +1,36 @@
+﻿<Window x:Class="Bowling_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bowling_Calculator"
+        mc:Ignorable="d"
+        Background="#333333"
+        Foreground="#FFFFFF"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="50"/>
+            <RowDefinition />
+            <RowDefinition Height="50"/>
+            <RowDefinition />
+            <RowDefinition Height="50"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Game1:" Grid.Row="1" VerticalAlignment="Center"/>
+        <TextBox x:Name="Text1" Background="DarkGray" Width="200"
+                 Height="30" Grid.Row="1" Grid.Column ="0" Margin="50, 0, 0, 0" />
+        <TextBlock Text="Game2:" Grid.Row="3" VerticalAlignment="Center"/>
+        <TextBox x:Name="Text2" Background="DarkGray" Width="200"
+                 Height="30" Grid.Row="3" Grid.Column ="0" Margin="50, 0, 0, 0" />
+        <TextBlock Text="Game3:" Grid.Row="5" VerticalAlignment="Center"/>
+        <TextBox x:Name="Text3" Background="DarkGray" Width="200"
+                 Height="30" Grid.Row="5" Grid.Column ="0" Margin="50, 0, 0, 0" />
+    </Grid>
+</Window>
