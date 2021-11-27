@@ -30,7 +30,7 @@
         <!--#region User Profile-->
         <TextBlock Text="Name:" Grid.Row="1" VerticalAlignment="Center"/>
         <TextBox x:Name="userName" Background="DarkGray" Width="200"
-                 Height="30" Grid.Row="1" Grid.Column ="0" Margin="50, 0, 0, 0" />
+                 Height="30" Grid.Row="1" Grid.Column ="0" Margin="50, 0, 0, 0" FontSize="20" />
         <TextBlock Text="Gender:" HorizontalAlignment="Left" VerticalAlignment="Center"
                    Grid.Row="2" />
         <RadioButton x:Name="maleButton" Content="Male" Foreground="White" Grid.Row="2" 
@@ -45,32 +45,55 @@
                    HorizontalAlignment="Center" VerticalAlignment="Center" />
         <!--#region Game Score Input-->
         <TextBlock Text="Game1:" Grid.Row="4" VerticalAlignment="Center"/>
-        <TextBox x:Name="scoreOne" Background="DarkGray" Width="200"
+        <TextBox x:Name="scoreOne"  FontSize="20" Background="DarkGray" Width="200"
                  Height="30" Grid.Row="4" Grid.Column ="0" Margin="50, 0, 0, 0" />
         <TextBlock Text="Game2:" Grid.Row="5" VerticalAlignment="Center"/>
-        <TextBox x:Name="scoreTwo" Background="DarkGray" Width="200"
+        <TextBox x:Name="scoreTwo" FontSize="20" Background="DarkGray" Width="200"
                  Height="30" Grid.Row="5" Grid.Column ="0" Margin="50, 0, 0, 0" />
         <TextBlock Text="Game3:" Grid.Row="6" VerticalAlignment="Center"/>
-        <TextBox x:Name="scoreThree" Background="DarkGray" Width="200"
+        <TextBox x:Name="scoreThree" FontSize="20" Background="DarkGray" Width="200"
                  Height="30" Grid.Row="6" Grid.Column ="0" Margin="50, 0, 0, 0" />
         <!--#endregion-->
         <!--#region Buttons-->
         <Button x:Name="calculateBtn" Content="Calculate Scores" Grid.Column="1" 
-                Grid.Row="4" Background="DarkGray" FontSize="25" Margin="10"/>
+                Grid.Row="4" Background="DarkGray" FontSize="20" Margin="13" Click="calculateBtn_Click"/>
         <Button x:Name="clearBtn" Content="Clear" Grid.Column="1" 
-                Grid.Row="5" Background="DarkGray" FontSize="25" Margin="10"/>
+                Grid.Row="5" Background="DarkGray" FontSize="20" Margin="13" Click="clearBtn_Click"/>
         <Button x:Name="exitBtn" Content="Exit" Grid.Column="1" 
-                Grid.Row="6" Background="DarkGray" FontSize="25" Margin="10"/>
+                Grid.Row="6" Background="DarkGray" FontSize="20" Margin="13" Click="exitBtn_Click"/>
         <!--#endregion-->
         <!--#region User Info-->
         <TextBlock Text="User Name:" Grid.Column="1" Grid.Row="2"
                    VerticalAlignment="Center" />
-        <TextBlock Text="" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center"
+        <TextBlock x:Name="userNameDisplay" Text="" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center"
                    Margin="65, 0, 0, 0"/>
         <TextBlock Text="Gender: " Grid.Column="1" Grid.Row="3"
                    VerticalAlignment="Center" />
-        <TextBlock Text="" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center"
+        <TextBlock x:Name="genderDisplay" Text="" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center"
                    Margin="50, 0, 0, 0"/>
+        <!--#endregion-->
+        <!--#region Scores-->
+        <TextBlock Text="Average:" Grid.Column="2" Grid.Row="1"
+                   VerticalAlignment="Center" FontSize="25"/>
+        <TextBlock x:Name="averageScore" Text="" Grid.Column="2"
+                   Grid.Row="1" VerticalAlignment="Center"
+                   Margin="105, 0, 0, 0" FontSize="25"/>
+        <TextBlock Text="Handicap:" Grid.Column="2" Grid.Row="2"
+                   VerticalAlignment="Center" FontSize="25"/>
+        <TextBlock x:Name="handicap" Text="" Grid.Column="2"
+                   Grid.Row="2" VerticalAlignment="Center"
+                   Margin="120, 0, 0, 0" FontSize="25"/>
+        <TextBlock Text="High Game:" Grid.Column="2" Grid.Row="3"
+                   VerticalAlignment="Center" FontSize="25"/>
+        <TextBlock x:Name="highGame" Text="" Grid.Column="2"
+                   Grid.Row="3" VerticalAlignment="Center"
+                   Margin="140, 0, 0, 0" FontSize="25"/>
+        <TextBlock Text="Total:" Grid.Row="4" Grid.Column="2" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   FontSize="50"/>
+        <TextBlock x:Name="finalScore" Text="" Grid.Row="5" Grid.Column="2" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   FontSize="50"/>
         <!--#endregion-->
     </Grid>
 </Window>
