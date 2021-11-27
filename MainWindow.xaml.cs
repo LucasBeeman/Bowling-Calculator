@@ -45,13 +45,6 @@ namespace Bowling_Calculator
                 answerTwo = 0;
                 answerThree = 0;
             }
-            userName.Text = "";
-            maleButton.IsChecked = false;
-            femaleButton.IsChecked = false;
-            otherButton.IsChecked = false;
-            scoreOne.Text = "";
-            scoreTwo.Text = "";
-            scoreThree.Text = "";
         }
 
         //displays data that the user has inputed in their progile
@@ -88,6 +81,7 @@ namespace Bowling_Calculator
             return gameSum() / 3;
         }
 
+        //finds the highest game of the 3. If 2 games have the same score, it will output "tie"
         private void findHighScore()
         {
             if (answerOne > answerTwo && answerOne > answerThree)
@@ -104,7 +98,7 @@ namespace Bowling_Calculator
             }
             else
             {
-                highGame.Text = "5";
+                highGame.Text = "Tie";
             }
         }
 
@@ -118,8 +112,17 @@ namespace Bowling_Calculator
             //finds the handicap using the formula "(200 - [game average]) * .8
             handicap.Text = ((200 - gameAverage()) * .8).ToString();
             findHighScore();
+            //clears info that the user typed out
+            userName.Text = "";
+            maleButton.IsChecked = false;
+            femaleButton.IsChecked = false;
+            otherButton.IsChecked = false;
+            scoreOne.Text = "";
+            scoreTwo.Text = "";
+            scoreThree.Text = "";
         }
 
+        //clears all modified text & buttons
         private void clearBtn_Click(object sender, RoutedEventArgs e)
         {
             userNameDisplay.Text = "";
@@ -128,11 +131,19 @@ namespace Bowling_Calculator
             handicap.Text = "";
             highGame.Text = "";
             finalScore.Text = "";
+            userName.Text = "";
+            maleButton.IsChecked = false;
+            femaleButton.IsChecked = false;
+            otherButton.IsChecked = false;
+            scoreOne.Text = "";
+            scoreTwo.Text = "";
+            scoreThree.Text = "";
         }
 
+        //exits the program
         private void exitBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            Close();
         }
     }
 }
